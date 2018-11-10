@@ -1,3 +1,75 @@
-body {
+body,html {
+    height:100%;
     margin:0;
+    font-family:sans-serif;
+    font-size:14px;
+}
+a {
+    color:#fff;
+    text-decoration:none;
+}
+#cover-page {
+    position:relative;
+    background-image: url("../images/colorfulstars.jpg");
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content {
+    position:absolute;
+    width:75%;
+    top:25%;
+    left:15%;
+    color:#fff;
+}
+.content ul {
+    list-style: none;
+    margin:20px 0 0 5px;
+    padding:0;
+}
+.content ul li {
+    display:inline-block;
+}
+.content ul li a {
+    position:relative;                
+    font-size:20px;
+    margin-right:15px;
+    transition: all .2s ease-in;
+    color:#dbafa6;
+}
+.content ul li a:hover {
+    color:#fff;
+    text-shadow:0 0 2px #fff;
+}
+.content ul li a::before {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-weight:400;
+    font-size:24px;
+}
+.content ul li a.fa-linkedin::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f08c";
+}
+.content ul li a.fa-github-square::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f092";
+}
+.content ul li a.fa-folder::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f07b";
+}
+
+.name {
+    font-size:70px;
+    font-family:'Fugaz One',sans-serif;
+    transform: scaleY(1.1);
+    text-shadow:0 0 15px #000;
+}
+.sub-text {
+    margin-left:5px;
+    font-size:24px;
 }
