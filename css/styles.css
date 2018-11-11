@@ -29,7 +29,7 @@ a,a:hover {
 }
 #cover-page {
     position:relative;
-    background-image: url("./images/colorfulstars.jpg");
+    background-image: url("../images/colorfulstars.jpg");
     height:100%;
     background-position: center;
     background-repeat: no-repeat;
