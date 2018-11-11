@@ -6,27 +6,262 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fugaz+One">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/styles.css">
-        <title>Robin Dalton</title>
+        <!--<link rel="stylesheet" href="./css/styles.css">-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Robin Dalton &middot; Software Developer</title>
+
+        <style>
+        html {
+            height:100vh;
+        }
+        body {
+            height:100vh;
+            margin:0;
+            font-family:sans-serif;
+            font-size:16px;
+        }
+        ul {
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        
+        h3,h4 {
+            font-weight:700;
+        }
+        h3 {
+            font-size:32px;            
+            font-family:sans-serif;
+        }
+        #skills-page h3,#skills-page h4 {
+            text-shadow:1px 1px 5px #8b6969;
+        }
+        a,a:hover {
+            color:#fff;
+            text-decoration:none;
+        }
+        #cover-page {
+            position:relative;
+            background-image: url("./images/colorfulstars.jpg");
+            height:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            position:absolute;
+            width:75%;
+            top:170px;
+            left:15%;            
+        }
+        .index-content {
+            color:#fff;
+        }
+        .index-content ul {
+            margin:20px 0 0 0;
+        }
+        .index-content ul li {
+            display:inline-block;
+        }
+        .index-content ul li a {
+            position:relative;                
+            font-size:20px;
+            margin-right:15px;
+            transition: all .2s ease-in;
+            color:#dbafa6;
+            text-shadow:2px 2px 5px #000;
+        }
+        .index-content ul li a:hover,
+        #li-name #name:hover {
+            color:#fff;
+            text-shadow:0 0 2px #fff;
+        }
+        .index-content ul li a::before {
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-weight:400;
+            font-size:24px;
+        }
+        .index-content ul li a.fa-linkedin::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f08c";
+        }
+        .index-content ul li a.fa-github-square::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f092";
+        }
+        .index-content ul li a.fa-folder::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f07b";
+        }
+
+        #name {
+            font-size:70px;
+            font-family:'Fugaz One',sans-serif;
+            transform: scaleY(1.1);
+            text-shadow:2px 2px 15px #000;
+            display:block;
+        }
+        #nameph {
+            margin-left:-2px;
+        }
+        .sub-text {
+            font-size:24px;
+        }
+        #skills-page,
+        #portfolio-page {
+            min-height:100vh;
+        }
+        #skills-page {
+            position:relative;
+            background-color:#e7d4d4;
+        }
+        #portfolio-page {
+            position:relative;
+            background-color:#d4e7d8;
+        }
+        .fixed-top {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            z-index:100;
+            background: rgba(0, 0, 0, 0.7);
+            padding-left:15%;
+            padding-bottom:20px;
+        }
+        #li-name {
+            width:170px;
+            display:none;
+            cursor: pointer;
+        }
+        #li-name #name {
+            font-size:24px;
+            margin:-15px 0;
+        }
+
+        .skill-box {            
+            text-align:center;
+        }
+        .skill-box img {
+            margin: 0 auto;
+            display:block;
+        }
+    </style>
 
     </head>
     <body>
         <div id="cover-page">
-            <div class="content">
-                <div class="name">Robin Dalton</div>
+            <div class="content index-content">
+                <div id="nameph"><div id="name">Robin Dalton</div></div>
                 <div class="sub-text">Software Developer</div>
-                <ul>
-                    <li><a href="#"><i class="fas fa-code"></i> <span>Skills</span></a></li>
-                    <li><a href="#"><i class="fas fa-folder"></i> <span>Portfolio</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/robin-dalton/"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
-                    <li><a href="https://github.com/rhdalton"><i class="fab fa-github-square"></i> <span>GitHub</span></a></li>
-                    
-                </ul>
+                <div id="sub-links">
+                    <ul>
+                        <li id="li-name"></li>
+                        <li><a id="goto-skills" href="#"><i class="fas fa-code"></i> <span>Skills</span></a></li>
+                        <li><a id="goto-portfolio" href="#"><i class="fas fa-folder"></i> <span>Portfolio</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/robin-dalton/" target="_blank"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
+                        <li><a href="https://github.com/rhdalton" target="_blank"><i class="fab fa-github-square"></i> <span>GitHub</span></a></li>
+                        
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="skills-page">
+            <div class="content skills-content">
+                <h3>Current Skill Sets:</h3>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md skill-box">
+                            <img src="./images/webdev.png" alt="" />
+                            <h4>Web Development</h4>
+                            <ul>
+                                <li>PHP</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap 4</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-md skill-box">
+                            <img src="./images/databases.png" alt="" />
+                            <h4>Databases</h4>
+                            <ul>
+                                <li>MySQL / MariaSQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-md skill-box">
+                            <img src="./images/python.png" alt="" />
+                            <h4>Python</h4>
+                            <ul>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                        <div class="col-md skill-box">
+                            <img src="./images/msnet.png" alt="" />
+                            <h4>C#</h4>
+                            <ul>
+                                <li>C#</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div id="portfolio-page">
+            <div class="content">
+                Portfolio
+            </div>
+        </div>
+
+
+    <script>
+    $(document).ready(function() {
+        $('#goto-skills').click(function(){
+            scrollSlideTo($('#skills-page').offset().top);
+            return false;
+        });
+        $('#goto-portfolio').click(function(){
+            scrollSlideTo($('#portfolio-page').offset().top);
+            return false;
+        });
+        $('#li-name').click(function() {
+            scrollSlideTo(0);
+            return false;
+        });
+        $(window).scroll(function() {
+            var pos = $(window).scrollTop();
+            var poschange = false;
+            if(pos > 300) {                
+                $('#sub-links').addClass('fixed-top');
+                $('#li-name').show("medium").css('display','inline-block');
+                if($('#name').parents('#li-name').length == 0) $('#name').hide().appendTo('#li-name').fadeIn(1500); 
+            }
+            else {
+                if($('#name').parents('#nameph').length == 0) $('#name').appendTo('#nameph');
+                $('#sub-links').removeClass('fixed-top');
+                $('#li-name').hide("medium");                
+            }
+            //console.log(pos);
+        });
+        function scrollSlideTo(p) {
+            $('html,body').animate({scrollTop:(p)},400);          
+        }
+        var skh = $('.skills-content').height();
+        skh += 270;
+        if(skh > $(window).height()) {
+            $('#skills-page').css('height',skh+'px');
+        }
+        //console.log($(window).height()+','+$('.skills-content').height());
+    });
+    </script>
     </body>
 </html>
