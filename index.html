@@ -19,8 +19,9 @@
     <body>
         <div id="cover-page">
             <div class="content index-content">
-                <div id="nameph"><div id="name">Robin Dalton</div></div>
-                <div class="sub-text">Software Developer</div>
+                <div class="sup-text">IF <em>robin</em> THEN <em>code();</em></div>
+                <div class="name">Robin Dalton</div>
+                <div class="sub-text">Software Programmer</div>
                 <div id="sub-links">
                     <ul>
                         <li id="li-name"></li>
@@ -85,6 +86,9 @@
 
     <script>
     $(document).ready(function() {
+        var poschange = false;
+        var headername = $('#name').html();
+
         $('#goto-skills').click(function(){
             scrollSlideTo($('#skills-page').offset().top);
             return false;
@@ -99,18 +103,20 @@
         });
         $(window).scroll(function() {
             var pos = $(window).scrollTop();
-            var poschange = false;
-            if(pos > 300) {                
+            
+            if(pos > 300 && poschange == false) {
+                poschange = true;                         
                 $('#sub-links').addClass('fixed-top');
                 $('#li-name').show("medium").css('display','inline-block');
-                if($('#name').parents('#li-name').length == 0) $('#name').hide().appendTo('#li-name').fadeIn(1500); 
+                $('.name').clone().hide().appendTo('#li-name').fadeIn(1500);
+                //console.log(pos);
             }
-            else {
-                if($('#name').parents('#nameph').length == 0) $('#name').appendTo('#nameph');
+            else if(pos <= 300 && poschange == true) {
+                poschange = false;
                 $('#sub-links').removeClass('fixed-top');
-                $('#li-name').hide("medium");                
+                $('#li-name').hide("medium").html('');
+                //console.log(pos);
             }
-            //console.log(pos);
         });
         function scrollSlideTo(p) {
             $('html,body').animate({scrollTop:(p)},400);          

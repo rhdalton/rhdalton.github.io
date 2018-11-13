@@ -59,7 +59,7 @@ a,a:hover {
     text-shadow:2px 2px 5px #000;
 }
 .index-content ul li a:hover,
-#li-name #name:hover {
+#li-name .name:hover {
     color:#fff;
     text-shadow:0 0 2px #fff;
 }
@@ -84,18 +84,38 @@ a,a:hover {
     content: "\f07b";
 }
 
-#name {
+.name {
     font-size:70px;
     font-family:'Fugaz One',sans-serif;
     transform: scaleY(1.1);
     text-shadow:2px 2px 15px #000;
     display:block;
 }
-#nameph {
-    margin-left:-2px;
+.sup-text {
+    font-size: 24px;
+    font-family: Courier;
+    overflow: hidden; 
+    border-right: 4px solid #ff9c00;
+    color:#d7e7ce;
+    white-space: nowrap;
+    letter-spacing: 5px;
+    font-weight:700;
+    width:390px;
+    animation: 
+        typing 4s steps(20, end),
+        blink-caret .8s step-end infinite;
+    text-shadow:2px 2px 15px #000;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 390px }
+  }
+@keyframes blink-caret {
+    from, to { border-color: #ff9c00; }
+    50% { border-color: transparent; }
 }
 .sub-text {
-    font-size:24px;
+    font-size:20px;
 }
 #skills-page,
 #portfolio-page {
@@ -103,7 +123,7 @@ a,a:hover {
 }
 #skills-page {
     position:relative;
-    background-color:#e7d4d4;
+    background-color:#ebdbdb;
 }
 #portfolio-page {
     position:relative;
@@ -121,10 +141,11 @@ a,a:hover {
 }
 #li-name {
     width:170px;
-    display:none;
-    cursor: pointer;
+    display:none;    
 }
-#li-name #name {
+#li-name .name {
+    cursor: pointer;
+    font-family:'Fugaz One',sans-serif;
     font-size:24px;
     margin:-15px 0;
 }
