@@ -2,10 +2,11 @@ html {
     height:100vh;
 }
 body {
-    height:100vh;
-    margin:0;
-    font-family:sans-serif;
-    font-size:16px;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #30303c;
 }
 ul {
     list-style:none;
@@ -167,7 +168,7 @@ a,a:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     margin-bottom:30px;
-    min-height:180px;
+    min-height:170px;
     font-size:16px;
 }
 .elbox li {
