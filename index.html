@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -37,97 +37,140 @@
         <div id="skills-page">
             <div class="content skills-content">
                 <h3>Current Skill Sets:</h3>
-                <div class="container mt-5">
+                <div class="container mycontainer">
                     <div class="row">
-                        <div class="col-md skill-box">
-                            <img src="./images/webdev.png" alt="" />
-                            <h4>Web Development</h4>
-                            <ul>
-                                <li>PHP</li>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>Javascript</li>
-                                <li>jQuery</li>
-                                <li>Bootstrap 4</li>
-                            </ul>
-
+                        <div class="col-md-6 col-xl-4">
+                            <div class="elbox">
+                                <div class="media contentbox">
+                                    <img class="align-self-start mr-2" src="./images/webdev.png" alt="" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Web Development</h5>
+                                        <ul>
+                                            <li>PHP</li>  
+                                            <li>HTML5</li>
+                                            <li>CSS3</li>
+                                            <li>Javascript</li>
+                                            <li>jQuery</li>
+                                            <li>Bootstrap 4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md skill-box">
-                            <img src="./images/databases.png" alt="" />
-                            <h4>Databases</h4>
-                            <ul>
-                                <li>MySQL / MariaSQL</li>
-                            </ul>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="elbox">
+                                <div class="media contentbox">
+                                    <img class="align-self-start mr-2" src="./images/databases.png" alt="" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Databases</h5>
+                                        <ul>
+                                            <li>MySQL</li>
+                                            <li>T-SQL</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md skill-box">
-                            <img src="./images/python.png" alt="" />
-                            <h4>Python</h4>
-                            <ul>
-                                <li>Python</li>
-                            </ul>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="elbox">
+                                <div class="media contentbox">
+                                    <img class="align-self-start mr-2" src="./images/python.png" alt="" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Python</h5>
+                                        <ul>
+                                            <li>Python</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md skill-box">
-                            <img src="./images/msnet.png" alt="" />
-                            <h4>C#</h4>
-                            <ul>
-                                <li>C#</li>
-                            </ul>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="elbox">
+                                <div class="media contentbox">
+                                    <img class="align-self-start mr-2" src="./images/msnet.png" alt="" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">C#</h5>
+                                        <ul>
+                                            <li>C#</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="portfolio-page">
-            <div class="content">
-                Portfolio
+            <div class="content portfolio-content">
+                <h3>Projects:</h3>
+                <div class="container mycontainer">
+                    <div class="row">
+
+                        <div class="col-md-6 col-xl-4">
+                            <div class="elbox">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="elbox">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="elbox">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+                <script>
+                    $(document).ready(function () {
+                        var poschange = false;
+                        var headername = $('#name').html();
 
-    <script>
-    $(document).ready(function() {
-        var poschange = false;
-        var headername = $('#name').html();
+                        $('#goto-skills').click(function () {
+                            scrollSlideTo($('#skills-page').offset().top);
+                            return false;
+                        });
+                        $('#goto-portfolio').click(function () {
+                            scrollSlideTo($('#portfolio-page').offset().top);
+                            return false;
+                        });
+                        $('#li-name').click(function () {
+                            scrollSlideTo(0);
+                            return false;
+                        });
+                        $(window).scroll(function () {
+                            var pos = $(window).scrollTop();
 
-        $('#goto-skills').click(function(){
-            scrollSlideTo($('#skills-page').offset().top);
-            return false;
-        });
-        $('#goto-portfolio').click(function(){
-            scrollSlideTo($('#portfolio-page').offset().top);
-            return false;
-        });
-        $('#li-name').click(function() {
-            scrollSlideTo(0);
-            return false;
-        });
-        $(window).scroll(function() {
-            var pos = $(window).scrollTop();
-            
-            if(pos > 300 && poschange == false) {
-                poschange = true;                         
-                $('#sub-links').addClass('fixed-top');
-                $('#li-name').show("medium").css('display','inline-block');
-                $('.name').clone().hide().appendTo('#li-name').fadeIn(1500);
-                //console.log(pos);
-            }
-            else if(pos <= 300 && poschange == true) {
-                poschange = false;
-                $('#sub-links').removeClass('fixed-top');
-                $('#li-name').hide("medium").html('');
-                //console.log(pos);
-            }
-        });
-        function scrollSlideTo(p) {
-            $('html,body').animate({scrollTop:(p)},400);          
-        }
-        var skh = $('.skills-content').height();
-        skh += 270;
-        if(skh > $(window).height()) {
-            $('#skills-page').css('height',skh+'px');
-        }
-        //console.log($(window).height()+','+$('.skills-content').height());
-    });
-    </script>
-    </body>
+                            if (pos > 300 && poschange == false) {
+                                poschange = true;
+                                $('#sub-links').addClass('fixed-top');
+                                $('#li-name').show("medium").css('display', 'inline-block');
+                                $('.name').clone().hide().appendTo('#li-name').fadeIn(1500);
+                                //console.log(pos);
+                            }
+                            else if (pos <= 300 && poschange == true) {
+                                poschange = false;
+                                $('#sub-links').removeClass('fixed-top');
+                                $('#li-name').hide("medium").html('');
+                                //console.log(pos);
+                            }
+                        });
+                        function scrollSlideTo(p) {
+                            $('html,body').animate({ scrollTop: (p) }, 400);
+                        }
+                        var skh = $('.skills-content').height();
+                        skh += 270;
+                        if (skh > $(window).height()) {
+                            $('#skills-page').css('height', skh + 'px');
+                        }
+                        //console.log($(window).height()+','+$('.skills-content').height());
+                    });
+                </script>
+</body>
 </html>

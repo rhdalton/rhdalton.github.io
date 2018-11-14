@@ -20,8 +20,15 @@ h3 {
     font-size:32px;            
     font-family:sans-serif;
 }
-#skills-page h3,#skills-page h4 {
-    text-shadow:1px 1px 5px #8b6969;
+#skills-page h3 {
+    color: #5f4242;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.7);
+    margin-bottom: 30px;
+}
+#portfolio-page h3 {
+    color: #35513b;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.7);
+    margin-bottom: 30px;
 }
 a,a:hover {
     color:#fff;
@@ -40,6 +47,10 @@ a,a:hover {
     width:75%;
     top:170px;
     left:15%;            
+}
+.portfolio-content,
+.skills-content {
+    top:140px;
 }
 .index-content {
     color:#fff;
@@ -149,11 +160,31 @@ a,a:hover {
     font-size:24px;
     margin:-15px 0;
 }
-
-.skill-box {            
-    text-align:center;
+.elbox {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    margin-bottom:30px;
+    min-height:180px;
+    font-size:16px;
 }
-.skill-box img {
-    margin: 0 auto;
-    display:block;
+.elbox li {
+    display:inline-block;
+    margin-right:10px;
+}
+.mycontainer {
+    padding:0px;
+    margin:0;
+}
+.contentbox img {
+    max-width: 120px;
+}
+.media-body {
+    margin-top:15px;
+}
+h5{
+    font-size:18px;
+    font-weight:700;
 }
