@@ -13,12 +13,14 @@ ul {
     padding:0;
 }
 
-h3,h4 {
+h3,h4,h5 {
     font-weight:700;
 }
 h3 {
-    font-size:32px;            
-    font-family:sans-serif;
+    font-size:32px;
+}
+h5{
+    font-size:18px;
 }
 #skills-page h3 {
     color: #5f4242;
@@ -166,9 +168,8 @@ a,a:hover {
     padding: 10px;
     background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    margin-bottom:30px;
-    min-height:170px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);    
+    min-height:160px;
     font-size:16px;
 }
 .elbox li {
@@ -177,15 +178,14 @@ a,a:hover {
 }
 .mycontainer {
     padding:0px;
-    margin:0;
+    margin:0 5px;
+}
+.lesspad {
+    padding:10px;
 }
 .contentbox img {
     max-width: 120px;
 }
 .media-body {
     margin-top:15px;
-}
-h5{
-    font-size:18px;
-    font-weight:700;
 }
