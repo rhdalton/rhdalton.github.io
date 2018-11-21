@@ -100,10 +100,12 @@ a,a:hover {
 
 .name {
     font-size:70px;
-    font-family:'Fugaz One',sans-serif;
+    font-family:'Kanit',sans-serif;
     transform: scaleY(1.1);
     text-shadow:2px 2px 15px #000;
     display:block;
+    font-style:italic;
+    font-weight:700;
 }
 .sup-text {
     font-size: 24px;
@@ -188,4 +190,31 @@ a,a:hover {
 }
 .media-body {
     margin-top:15px;
+}
+.projects-box {
+    cursor:pointer;
+    background-color:#ededed;
+}
+.projects-box:hover {
+    background-color:#fff;
+    box-shadow: 0 0 15px rgba(45, 89, 54, .7);
+}
+.modal a {
+    text-decoration:underline;
+    color:#2b773b;
+}
+.modal a:hover {
+    text-decoration:none;
+}
+.modal .contentbox img {
+    max-width:none;
+    padding:5px;
+    margin:18px 18px 0 0;
+    border:1px solid #ccc;
+}
+.modal ul {
+    margin-left:20px;
+}
+.modal li {
+    list-style: initial;
 }

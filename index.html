@@ -5,14 +5,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fugaz+One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/styles.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <title>Robin Dalton &middot; Software Developer</title>
+        <title>Robin Dalton / Software Developer</title>
 
 
     </head>
@@ -21,7 +21,7 @@
             <div class="content index-content">
                 <div class="sup-text">IF <em>robin</em> THEN <em>code();</em></div>
                 <div class="name">Robin Dalton</div>
-                <div class="sub-text">Software Programmer</div>
+                <div class="sub-text">I'm a software developer who loves creating.</div>
                 <div id="sub-links">
                     <ul>
                         <li id="li-name"></li>
@@ -29,7 +29,7 @@
                         <li><a id="goto-portfolio" href="#"><i class="fas fa-folder"></i> <span>Portfolio</span></a></li>
                         <li><a href="https://www.linkedin.com/in/robin-dalton/" target="_blank"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
                         <li><a href="https://github.com/rhdalton" target="_blank"><i class="fab fa-github-square"></i> <span>GitHub</span></a></li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                                     <div class="media-body">
                                         <h5 class="mt-0">Web Development</h5>
                                         <ul>
-                                            <li>PHP</li>  
+                                            <li>PHP</li>
                                             <li>HTML5</li>
                                             <li>CSS3</li>
                                             <li>Javascript</li>
@@ -66,6 +66,7 @@
                                         <ul>
                                             <li>MySQL</li>
                                             <li>T-SQL</li>
+                                            <li>SQLite3</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -78,7 +79,10 @@
                                     <div class="media-body">
                                         <h5 class="mt-0">Python</h5>
                                         <ul>
-                                            <li>Python</li>
+                                            <li>Python3</li>
+                                            <li>tkinter</li>
+                                            <li>Kivy</li>
+                                            <li>Django</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -97,6 +101,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6 col-xl-4 lesspad">
+                                <div class="elbox">
+                                    <div class="media contentbox">
+                                        <img class="align-self-start mr-2" src="./images/agile.png" alt="" />
+                                        <div class="media-body">
+                                            <h5 class="mt-0">Agile Development</h5>
+                                            <ul>
+                                                <li>Scrum</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -104,73 +121,190 @@
         <div id="portfolio-page">
             <div class="content portfolio-content">
                 <h3>Projects:</h3>
+                <p>Click on each project to learn more.</p>
                 <div class="container mycontainer">
                     <div class="row">
-
                         <div class="col-md-6 col-xl-4 lesspad">
-                            <div class="elbox">
-
+                            <div id="box-1" class="elbox projects-box">
+                                <div class="media contentbox">
+                                    <img class="align-self-start mr-2" src="./images/webdev.png" alt="" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Web Development</h5>
+                                        <strong>ESLFiles.com</strong>                                        
+                                        <ul>
+                                            <li>Wordpress</li>
+                                            <li>PHP</li>
+                                            <li>MySQL</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4 lesspad">
-                            <div class="elbox">
-
+                            <div id="box-2" class="elbox projects-box">
+                                <div class="media contentbox">
+                                    <img class="align-self-start mr-2" src="./images/webdev.png" alt="" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Web Development</h5>
+                                        <strong>Archeage.mmodex.com</strong>                                        
+                                        <ul>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>Javascript</li>
+                                            <li>jQuery</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-xl-4 lesspad">
-                            <div class="elbox">
-
+                            <div id="box-3" class="elbox projects-box">
+                                <div class="media contentbox">
+                                    <img class="align-self-start mr-2" src="./images/python.png" alt="" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Python</h5>
+                                        <strong>A Charting Program</strong>                                        
+                                        <ul>
+                                            <li>tkinter</li>
+                                            <li>matplotlib</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Project Modals -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-box-1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Web Development: ESLFiles.com</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="media contentbox">
+                                <img class="align-self-start" src="./images/eslfiles.png" alt="" />
+                                <div class="media-body">
+                                    <p>Working on <a href="https://eslfiles.com">ESLFiles.com</a>, I deleveped a file download system to allow users of the site to download files based on their permissions and integrated into the <strong>Wordpress</strong> CMS. This system includes a <strong>PHP/MySQL</strong> backend for admin users to upload files, track downloads, and analyze additional information on the files being served.</p>
+                                    <p>I also created a file template creator with <strong>PHP</strong> that allows users to upload images and generate dynamic PDF files with those images. The PDF files with the formatted images can then be saved and downloaded.
+                                        <a href="https://eslfiles.com/flashcards/" target="_blank">https://eslfiles.com/flashcards/</a></p>
+                                </div>
+                            </div>                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-box-2">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Web Development: Archeage.mmodex.com</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="media contentbox">
+                                <img class="align-self-start" src="./images/archeage.png" alt="" />
+                                <div class="media-body">
+                                    <p>Working on <a href="http://archeage.mmodex.com">Archeage.mmodex.com</a>, using <strong>HTML, CSS, Javascript, jQuery</strong> with <strong>PHP & MySQL</strong>, I created web-based tools to help players get more out of playing this MMORPG game. Some tools include:</p>
+                                    <ul>
+                                        <li><a href="http://archeage.mmodex.com/archeage-regrade-simulator/" target="_blank">Enchanting Simulator</a> to allow players to simulate upgrading their equipment with game-like conditions without the risk of actually losing their equipment in game.</li>
+                                        <li><a href="http://archeage.mmodex.com/tradepack-profit-calculator/" target="_blank">Trade Calcuator</a> that helps players optimze their gold profits from doing specific trading quests in game.</li>
+                                        <li><a href="http://archeage.mmodex.com/skill-calculator/" target="_blank">Skill Calculator</a> for players to calcuate and optimze their skill points for their character.</li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" tabindex="-1" role="dialog" id="modal-box-3">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Python: A Bitcoin Charting Program</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="media contentbox">
+                                    <img class="align-self-start" src="./images/python.png" alt="" />
+                                    <div class="media-body">
+                                        <p></p>
+                                    </div>
+                                </div>                        
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- End Project Modals -->
 
-                <script>
-                    $(document).ready(function () {
-                        var poschange = false;
-                        var headername = $('#name').html();
+        <script>
+            $(document).ready(function () {
+                var poschange = false;
+                var headername = $('#name').html();
 
-                        $('#goto-skills').click(function () {
-                            scrollSlideTo($('#skills-page').offset().top);
-                            return false;
-                        });
-                        $('#goto-portfolio').click(function () {
-                            scrollSlideTo($('#portfolio-page').offset().top);
-                            return false;
-                        });
-                        $('#li-name').click(function () {
-                            scrollSlideTo(0);
-                            return false;
-                        });
-                        $(window).scroll(function () {
-                            var pos = $(window).scrollTop();
+                $('#goto-skills').click(function () {
+                    scrollSlideTo($('#skills-page').offset().top);
+                    return false;
+                });
+                $('#goto-portfolio').click(function () {
+                    scrollSlideTo($('#portfolio-page').offset().top);
+                    return false;
+                });
+                $('#li-name').click(function () {
+                    scrollSlideTo(0);
+                    return false;
+                });
+                $(window).scroll(function () {
+                    var pos = $(window).scrollTop();
 
-                            if (pos > 300 && poschange == false) {
-                                poschange = true;
-                                $('#sub-links').addClass('fixed-top');
-                                $('#li-name').show("medium").css('display', 'inline-block');
-                                $('.name').clone().hide().appendTo('#li-name').fadeIn(1500);
-                                //console.log(pos);
-                            }
-                            else if (pos <= 300 && poschange == true) {
-                                poschange = false;
-                                $('#sub-links').removeClass('fixed-top');
-                                $('#li-name').hide("medium").html('');
-                                //console.log(pos);
-                            }
-                        });
-                        function scrollSlideTo(p) {
-                            $('html,body').animate({ scrollTop: (p) }, 400);
-                        }
-                        var skh = $('.skills-content').height();
-                        skh += 270;
-                        if (skh > $(window).height()) {
-                            $('#skills-page').css('height', skh + 'px');
-                        }
-                        //console.log($(window).height()+','+$('.skills-content').height());
-                    });
-                </script>
-</body>
+                    if (pos > 300 && poschange == false) {
+                        poschange = true;
+                        $('#sub-links').addClass('fixed-top');
+                        $('#li-name').show("medium").css('display', 'inline-block');
+                        $('.name').clone().hide().appendTo('#li-name').fadeIn(1500);
+                        //console.log(pos);
+                    }
+                    else if (pos <= 300 && poschange == true) {
+                        poschange = false;
+                        $('#sub-links').removeClass('fixed-top');
+                        $('#li-name').hide("medium").html('');
+                        //console.log(pos);
+                    }
+                });
+                function scrollSlideTo(p) {
+                    $('html,body').animate({ scrollTop: (p) }, 400);
+                }
+                var skh = $('.skills-content').height();
+                skh += 270;
+                if (skh > $(window).height()) {
+                    $('#skills-page').css('height', skh + 'px');
+                }
+                //console.log($(window).height()+','+$('.skills-content').height());
+
+                $('#box-1,#box-2,#box-3').click(function () {
+                    $('#modal-' + $(this).attr('id')).modal();
+                })
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
 </html>
