@@ -270,55 +270,7 @@
                 </div>
             <!-- End Project Modals -->
 
-        <script>
-            $(document).ready(function () {
-                var poschange = false;
-                var headername = $('#name').html();
-
-                $('#goto-skills').click(function () {
-                    scrollSlideTo($('#skills-page').offset().top);
-                    return false;
-                });
-                $('#goto-portfolio').click(function () {
-                    scrollSlideTo($('#portfolio-page').offset().top);
-                    return false;
-                });
-                $('#li-name').click(function () {
-                    scrollSlideTo(0);
-                    return false;
-                });
-                $(window).scroll(function () {
-                    var pos = $(window).scrollTop();
-
-                    if (pos > 300 && poschange == false) {
-                        poschange = true;
-                        $('#sub-links').addClass('fixed-top');
-                        $('#li-name').show("medium").css('display', 'inline-block');
-                        $('.name').clone().hide().appendTo('#li-name').fadeIn(1500);
-                        //console.log(pos);
-                    }
-                    else if (pos <= 300 && poschange == true) {
-                        poschange = false;
-                        $('#sub-links').removeClass('fixed-top');
-                        $('#li-name').hide("medium").html('');
-                        //console.log(pos);
-                    }
-                });
-                function scrollSlideTo(p) {
-                    $('html,body').animate({ scrollTop: (p) }, 400);
-                }
-                var skh = $('.skills-content').height();
-                skh += 270;
-                if (skh > $(window).height()) {
-                    $('#skills-page').css('height', skh + 'px');
-                }
-                //console.log($(window).height()+','+$('.skills-content').height());
-
-                $('#box-1,#box-2,#box-3').click(function () {
-                    $('#modal-' + $(this).attr('id')).modal();
-                })
-            });
-        </script>
+        <script type="text/javascript" src="./js/script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
