@@ -145,6 +145,18 @@ a,a:hover {
     position:relative;
     background-color:#d4e7d8;
 }
+#footer {
+    background:#3f4540;
+}
+#footer-inner {
+    padding:12px;
+    font-size:.9em;
+    color:#fff;    
+    margin-left:15%;
+}
+#footer-inner a {
+    text-decoration:underline;
+}
 .fixed-top {
     position:fixed;
     top:0;
