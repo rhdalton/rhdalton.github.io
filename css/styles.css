@@ -7,12 +7,15 @@ body {
     font-family: sans-serif;
     font-size: 16px;    
 }
+a,a:hover {
+    color:#fff;
+    text-decoration:none;
+}
 ul {
     list-style:none;
     margin:0;
     padding:0;
 }
-
 h3,h4,h5 {
     font-weight:700;
 }
@@ -31,10 +34,6 @@ h5{
     color: #35513b;
     text-shadow: 1px 2px 2px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.7);
     margin-bottom: 30px;
-}
-a,a:hover {
-    color:#fff;
-    text-decoration:none;
 }
 #cover-page {
     position:relative;
@@ -85,19 +84,20 @@ a,a:hover {
     font-weight:400;
     font-size:24px;
 }
-.index-content ul li a.fa-linkedin::before {
+.index-content ul li a.fa-linkedin:before,
+.index-content ul li a.fa-github-square:before,
+.index-content ul li a.fa-folder:before {
     font-family: "Font Awesome 5 Free";
+}
+.index-content ul li a.fa-linkedin::before {
     content: "\f08c";
 }
 .index-content ul li a.fa-github-square::before {
-    font-family: "Font Awesome 5 Free";
     content: "\f092";
 }
 .index-content ul li a.fa-folder::before {
-    font-family: "Font Awesome 5 Free";
     content: "\f07b";
 }
-
 .name {
     font-size:70px;
     font-family:'Kanit',sans-serif;
@@ -146,7 +146,11 @@ a,a:hover {
     background-color:#d4e7d8;
 }
 #footer {
-    background:#3f4540;
+    background: rgba(0, 0, 0, 0.7);
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
 }
 #footer-inner {
     padding:12px;
