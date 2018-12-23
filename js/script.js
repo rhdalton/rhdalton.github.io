@@ -41,7 +41,12 @@ $(document).ready(function () {
     }
     //console.log($(window).height()+','+$('.skills-content').height());
 
-    $('#box-1,#box-2,#box-3,#box-4').click(function () {
-        $('#modal-' + $(this).attr('id')).modal();
+    $('#box-1,#box-2,#box-3,#box-4').on('click', function () {
+        var shell = '#modal-box-shell';
+        var id = $(this).attr('data-id');
+        $(shell+" .modal-title").html($('#modal-title-'+id).html());
+        $(shell+" .media-image").attr('src',$('#modal-image-'+id).html());
+        $(shell+" .media-body").html($('#modal-content-'+id).html());
+        $(shell).modal();
     })
 });

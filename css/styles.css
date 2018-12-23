@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
-    font-size: 16px;    
+    font-size: 16px;
 }
 a,a:hover {
     color:#fff;
@@ -48,7 +48,7 @@ h5{
     position:absolute;
     width:75%;
     top:170px;
-    left:15%;            
+    left:15%;
 }
 .portfolio-content,
 .skills-content {
@@ -64,7 +64,7 @@ h5{
     display:inline-block;
 }
 .index-content ul li a {
-    position:relative;                
+    position:relative;
     font-size:20px;
     margin-right:15px;
     transition: all .2s ease-in;
@@ -110,14 +110,14 @@ h5{
 .sup-text {
     font-size: 24px;
     font-family: Courier;
-    overflow: hidden; 
+    overflow: hidden;
     border-right: 4px solid #ff9c00;
     color:#d7e7ce;
     white-space: nowrap;
     letter-spacing: 5px;
     font-weight:700;
     width:390px;
-    animation: 
+    animation:
         typing 4s steps(20, end),
         blink-caret .8s step-end infinite;
     text-shadow:2px 2px 15px #000;
@@ -155,7 +155,7 @@ h5{
 #footer-inner {
     padding:12px;
     font-size:.9em;
-    color:#fff;    
+    color:#fff;
     margin-left:15%;
 }
 #footer-inner a {
@@ -173,7 +173,7 @@ h5{
 }
 #li-name {
     width:170px;
-    display:none;    
+    display:none;
 }
 #li-name .name {
     cursor: pointer;
@@ -186,7 +186,7 @@ h5{
     padding: 10px;
     background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);    
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     min-height:160px;
     font-size:16px;
 }
@@ -233,4 +233,7 @@ h5{
 }
 .modal li {
     list-style: initial;
+}
+.modal-contents {
+    display:none;
 }
