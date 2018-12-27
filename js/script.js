@@ -41,7 +41,7 @@ $(document).ready(function () {
     }
     //console.log($(window).height()+','+$('.skills-content').height());
 
-    $('#box-1,#box-2,#box-3,#box-4').on('click', function () {
+    $('#box-1,#box-2,#box-3,#box-4,#box-5').on('click', function () {
         var shell = '#modal-box-shell';
         var id = $(this).attr('data-id');
         $(shell+" .modal-title").html($('#modal-title-'+id).html());
